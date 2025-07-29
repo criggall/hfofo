@@ -1,31 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>HFOFO Snake</title>
-    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-    <style>
-      body {
-        margin: 0;
-        background: #111;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-      }
-      model-viewer {
-        width: 90vw;
-        height: 90vh;
-      }
-    </style>
-  </head>
-  <body>
-    <model-viewer
-      src="https://github.com/criggall/hfofo/releases/download/v1.0/hfofo.glb"
-      camera-controls
-      auto-rotate
-      background-color="#000"
-    ></model-viewer>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>HFOFO Snake</title>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <style>
+    body, html {
+      margin: 0; padding: 0; height: 100%;
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    model-viewer {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <model-viewer
+    src="hfofo.glb"
+    alt="3D Model"
+    camera-controls
+    auto-rotate
+    background-color="#000"
+    exposure="1"
+    shadow-intensity="1"
+  ></model-viewer>
+</body>
 </html>
 
