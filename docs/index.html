@@ -8,18 +8,58 @@
     body, html {
       margin: 0; padding: 0; height: 100%;
       background-color: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      font-family: sans-serif;
     }
+
     model-viewer {
       width: 100vw;
       height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    #overlay {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 10;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 12px;
+      border-radius: 8px;
+    }
+
+    #overlay h1 {
+      margin: 0 0 10px 0;
+      font-size: 1.8em;
+    }
+
+    label {
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    input[type="checkbox"] {
+      transform: scale(1.2);
     }
   </style>
 </head>
 <body>
+
+  <div id="overlay">
+    <h1>HFOFO Snake</h1>
+    <label>
+      <input type="checkbox" id="toggleModel" />
+      Reference particle only
+    </label>
+  </div>
+
   <model-viewer
+    id="viewer"
     src="hfofo.glb"
     alt="3D Model"
     camera-controls
@@ -29,6 +69,20 @@
     shadow-intensity="1"
     min-camera-orbit="auto auto 0.1m"
   ></model-viewer>
+
+  <script>
+    const toggle = document.getElementById('toggleModel');
+    const viewer = document.getElementById('viewer');
+
+    toggle.addEventListener('change', () => {
+      if (toggle.checked) {
+        viewer.src = "hfofo_ref.glb";
+      } else {
+        viewer.src = "hfofo.glb";
+      }
+    });
+  </script>
+
 </body>
 </html>
 
