@@ -16,3 +16,6 @@ Animated plots include:
 - Periodic helical orbit of $\mu^+$ and $\mu^-$
 - Reference particle phase space trajectories in various planes
 - Phase space evolution of $\mu^+$ beam
+
+Blender animations include:
+- $\mu^+$ and $\mu^-$ reference orbits through matching section and a few periods of the steady-state channel
