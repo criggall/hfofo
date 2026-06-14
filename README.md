@@ -1,6 +1,8 @@
 # Visualizations of the Helical FOFO Snake (HFOFO)
 
-For more on HFOFO, see Yuri Alexahin's 2015 paper: https://arxiv.org/abs/1806.07517
+For more on HFOFO, see our recent paper: https://inspirehep.net/literature/3159704
+
+Or, Yuri Alexahin's 2015 paper: https://arxiv.org/abs/1806.07517
 
 ## 3D Model
 
